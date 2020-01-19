@@ -3,7 +3,7 @@ import sys
 import re
 import requests
 
-def main(COD_ALUMNO='20152633K', CLAVE='309697'):
+def main(COD_ALUMNO='', CLAVE=''):
     uri = 'http://www.academico.uni.pe/intranet/public/alumno/entrar'
     uri_referer = 'http://www.orce.uni.edu.pe/'
     COD_ALUMNO = COD_ALUMNO
