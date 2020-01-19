@@ -6,11 +6,9 @@ import requests
 def main(COD_ALUMNO='', CLAVE=''):
     uri = 'http://www.academico.uni.pe/intranet/public/alumno/entrar'
     uri_referer = 'http://www.orce.uni.edu.pe/'
-    COD_ALUMNO = COD_ALUMNO
-    CONTRA = CLAVE
     with requests.Session() as session:
         session.get(uri)
-        login_data = dict(codUni=COD_ALUMNO, clave=CONTRA, tipo='acceso')
+        login_data = dict(codUni=COD_ALUMNO, clave=CLAVE, tipo='acceso')
         session.post(uri, data=login_data, headers={"Referer": uri_referer})
         uri_notas = 'http://www.academico.uni.pe/intranet/public/alumno/mis-notas'
         page = session.get(uri_notas)
