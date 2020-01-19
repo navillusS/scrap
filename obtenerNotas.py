@@ -48,4 +48,4 @@ if __name__ == "__main__":
     try:
         main(sys.argv[1], sys.argv[2])
     except IndexError:
-        main()
+        print("Falta ingresar usuario y contraseña")
